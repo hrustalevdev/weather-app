@@ -1,0 +1,88 @@
+@import "../../styles/variables";
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 30px;
+  border-bottom: 1px solid $appGray800;
+
+  .saveBtn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+    // Сброс стилей
+    appearance: none;
+
+    // Базовая настройка
+    color: $appButtonTextColor;
+    padding: 6px 7px 8px 7px;
+    border-width: 0;
+    border-radius: 8px;
+    background: $appButtonBgColor;
+    font-size: 0.9rem;
+    font-family: inherit;
+    min-width: 100px;
+    cursor: pointer;
+
+    &:hover {
+      color: darken($appButtonTextColor, 4%);
+      background: darken($appButtonBgColor, 4%);
+
+      span:last-child {
+        color: darken($appTurquoise, 4%);
+      }
+    }
+
+    &:active {
+      outline: none;
+      box-shadow: 0 0 0 2px lighten($appButtonBgColor, 25%);
+    }
+
+    &[disabled] {
+      color: darken($appButtonTextColor, 4%);
+      background: lighten($appButtonBgColor, 25%);
+      cursor: not-allowed;
+      box-shadow: inherit;
+
+      span:last-child {
+        color: darken($appButtonTextColor, 4%);
+      }
+    }
+
+    span:last-child {
+      color: $appTurquoise;
+    }
+  }
+
+  .main {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    .temp {
+      font-size: 2rem;
+      font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .location {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+
+  .weatherDescription {
+    font-weight: bold;
+    margin-top: 30px;
+
+    &:first-letter {
+      text-transform: capitalize;
+    }
+  }
+}

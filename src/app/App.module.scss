@@ -1,0 +1,33 @@
+@import "src/common/styles/variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+input,
+textarea {
+  color: $appTextColor;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-width: 580px;
+  max-width: 1280px;
+  min-height: 100vh;
+  margin: 0 auto;
+  color: $appTextColor;
+  background-color: $appBgColor;
+
+  .content {
+    flex: 1 0 auto;
+  }
+}

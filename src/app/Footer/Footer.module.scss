@@ -1,0 +1,44 @@
+@import "../../common/styles/variables";
+
+.container {
+  display: flex;
+  flex: 0 1 auto;
+  align-items: center;
+  height: $footerHeight;
+  padding: 10px 20px;
+  border-top: 1px solid $appBorderColor;
+  line-height: 1.2rem;
+  background-color: $appGray450;
+
+  .appName {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-right: 20px;
+    border-right: 1px solid $appBorderColor;
+    font-size: 0.9rem;
+    text-shadow: 0 1px 1px $appTextColor;
+
+    span:first-child {
+      color: $appTurquoise;
+    }
+
+    span:last-child {
+      color: $appOrange400;
+    }
+  }
+
+  .copyright {
+    padding-left: 20px;
+    font-size: 0.8rem;
+
+    .copy {
+      color: $appWhite;
+      text-shadow: 0 1px 1px $appTextColor;
+    }
+
+    .contacts {
+      color: $appTextColor;
+    }
+  }
+}
